@@ -17,7 +17,7 @@ const Experience = () => {
       position: 'สิบตรี บก.ร้อย',
       company: 'กองพันทหารราบที่ 2 กรมทหารราบที่ 8 ค่ายมหาศักดิพลเสพ',
       period: '2561-2564',
-      description: 'จัดการเอกสาร และ รับผิดชอบ ข้อมูลของพลทหาร'
+      description: 'จัดการเอกสาร และ รับผิดชอบ ข้อมูลของพลทหารทางคอมพิวเตอร์'
     }
   ];
 
@@ -83,7 +83,7 @@ const Experience = () => {
 
             {/* Projects */}
             <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-amber-900 mb-6">โครงการ</h3>
+              <h3 className="text-2xl font-bold text-amber-900 mb-6">การประกวด</h3>
               
               <div className="space-y-6">
                 {projects.map((project, index) => (
