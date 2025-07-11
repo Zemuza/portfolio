@@ -4,33 +4,33 @@ import { GraduationCap, Briefcase, Calendar } from 'lucide-react';
 const Experience = () => {
   const education = [
     {
-      degree: 'ปริญญาตรี',
-      field: 'สาขาวิชา...',
-      school: 'มหาวิทยาลัย...',
-      year: '2020-2024',
-      gpa: '3.XX'
+      degree: 'มัธยมศึกษา',
+      field: 'ภาควิชา วิทย-คณิต',
+      school: 'โรงเรียนสารสาสน์วิเทศคลองหลวง',
+      year: '2557-2559',
+      gpa: '2.67'
     }
   ];
 
   const workExperience = [
     {
-      position: 'ตำแหน่งงาน',
-      company: 'ชื่อบริษัท',
-      period: 'มม./ปปปป - มม./ปปปป',
-      description: 'รายละเอียดงานที่ทำ และความรับผิดชอบ'
+      position: 'สิบตรี บก.ร้อย',
+      company: 'กองพันทหารราบที่ 2 กรมทหารราบที่ 8 ค่ายมหาศักดิพลเสพ',
+      period: '2561-2564',
+      description: 'จัดการเอกสาร และ รับผิดชอบ ข้อมูลของพลทหาร'
     }
   ];
 
   const projects = [
     {
-      title: 'โครงการ/การฝึกงาน 1',
-      period: 'มม./ปปปป',
-      description: 'รายละเอียดโครงการ เทคโนโลยีที่ใช้ และผลที่ได้'
+      title: 'การวาดภาพประกวดภาพระบายสี',
+      period: 'วันที่ 22/12/2557',
+      description: 'ได้รับรางวัลรองชนะเลิศอันดับ 1 หัวข้อ ร่วมฉลอง 50 ปี โรงเรียนสารสาสน์พิทยา'
     },
     {
-      title: 'โครงการ/การฝึกงาน 2',
-      period: 'มม./ปปปป',
-      description: 'รายละเอียดโครงการ เทคโนโลยีที่ใช้ และผลที่ได้'
+      title: 'การประกวดทักษะวิชาชีพคหกรรมศาสตร์ คณะเทคโนโลยีคหกรรมศาสตร์ มหาวิทยาลัยเทคโนโลยีราชมลคลธัญบุรี',
+      period: 'วันที่ 1/12/2559',
+      description: 'ได้รับรางวัลรองชนะเลิศอันดับ 1 หัวข้อ การผลิตสื่อประกอบเล่นนิทาน คำสอนพ่อ'
     }
   ];
 
@@ -83,7 +83,7 @@ const Experience = () => {
 
             {/* Projects */}
             <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-amber-900 mb-6">การฝึกงาน / โครงการ</h3>
+              <h3 className="text-2xl font-bold text-amber-900 mb-6">โครงการ</h3>
               
               <div className="space-y-6">
                 {projects.map((project, index) => (

@@ -46,29 +46,28 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'อีเมล',
-      value: 'your.email@example.com',
+      value: 'z_zemuza@hotmail.com',
       color: 'from-red-400 to-pink-500',
       bgColor: 'from-red-50 to-pink-50'
     },
     {
       icon: Phone,
       title: 'โทรศัพท์',
-      value: '0XX-XXX-XXXX',
+      value: '0909624352',
       color: 'from-green-400 to-emerald-500',
       bgColor: 'from-green-50 to-emerald-50'
     },
     {
       icon: MapPin,
       title: 'ที่อยู่',
-      value: 'จังหวัด, ประเทศไทย',
+      value: 'บ้านเลขที่ 98/136 ต.คลองสาท อ.คลองหลวง จ.ปทุมธานี',
       color: 'from-blue-400 to-cyan-500',
       bgColor: 'from-blue-50 to-cyan-50'
     }
   ];
 
   const socialLinks = [
-    { icon: Github, color: 'from-gray-700 to-gray-900', href: '#' },
-    { icon: Linkedin, color: 'from-blue-600 to-blue-800', href: '#' }
+    { icon: Github, color: 'from-gray-700 to-gray-900', href: 'https://github.com/Zemuza' },
   ];
 
   return (

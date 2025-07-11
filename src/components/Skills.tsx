@@ -9,11 +9,13 @@ const Skills = () => {
 
   const technicalSkills = [
     { name: 'HTML/CSS', level: 90, color: 'from-red-400 to-pink-500' },
-    { name: 'JavaScript', level: 85, color: 'from-yellow-400 to-orange-500' },
-    { name: 'React', level: 80, color: 'from-blue-400 to-cyan-500' },
-    { name: 'Python', level: 75, color: 'from-green-400 to-teal-500' },
-    { name: 'Photoshop', level: 85, color: 'from-purple-400 to-indigo-500' },
-    { name: 'Figma', level: 80, color: 'from-pink-400 to-rose-500' }
+    { name: 'JavaScript', level: 70, color: 'from-yellow-400 to-orange-500' },
+    { name: 'React', level: 70, color: 'from-blue-400 to-cyan-500' },
+    { name: 'Python', level: 70, color: 'from-green-400 to-teal-500' },
+    { name: 'Photoshop', level: 90, color: 'from-purple-400 to-indigo-500' },
+    { name: 'Figma', level: 70, color: 'from-pink-400 to-rose-500' },
+    { name: 'Illustrator', level: 90, color: 'from-yellow-400 to-cyan-500' },
+    { name: 'Drawing', level: 80, color: 'from-green-400 to-indigo-500' }
   ];
 
   const softSkills = [

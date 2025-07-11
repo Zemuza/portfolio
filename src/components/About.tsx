@@ -67,9 +67,6 @@ const About = () => {
                 <div className="absolute inset-0 w-64 h-64 mx-auto rounded-full bg-gradient-to-r from-amber-400 to-orange-400 opacity-20 animate-glow"></div>
               </div>
               
-              <p className="text-sm text-amber-700 bg-white/60 backdrop-blur-sm rounded-lg p-3 inline-block shadow-lg hover:translate-y-1 hover:scale-105 transition-all duration-300 cursor-default">
-                📸 อัปโหลดรูปถ่ายของคุณได้ที่นี่
-              </p>
             </div>
             
             {/* Information Section */}
@@ -83,10 +80,10 @@ const About = () => {
                     <User className="text-white" size={20} />
                   </div>
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-amber-800 to-orange-800 bg-clip-text text-transparent hover:scale-105 hover:translate-x-2 transition-all duration-300 cursor-default">
-                    ชื่อ-นามสกุล
+                    หรรษธร เกษียร
                   </h3>
                 </div>
-                <p className="text-lg text-amber-800 hover:translate-x-2 hover:text-amber-900 transition-all duration-300 cursor-default">กรุณาแก้ไขใส่ชื่อจริงของคุณ</p>
+                <p className="text-lg text-amber-800 hover:translate-x-2 hover:text-amber-900 transition-all duration-300 cursor-default">ชื่อเล่น ต้าร์ </p>
               </div>
               
               {/* Education Card */}
@@ -100,9 +97,7 @@ const About = () => {
                   <h3 className="text-xl font-bold text-amber-900 hover:scale-105 hover:translate-x-2 transition-all duration-300 cursor-default">ประวัติย่อ</h3>
                 </div>
                 <p className="text-amber-800 leading-relaxed hover:translate-x-2 hover:text-amber-900 transition-all duration-300 cursor-default">
-                  สำเร็จการศึกษาระดับปริญญาตรี สาขา... จากมหาวิทยาลัย... 
-                  มีประสบการณ์ทำงานด้าน... เป็นเวลา... ปี 
-                  มีความสนใจในการพัฒนาและเรียนรู้เทคโนโลยีใหม่ๆ อย่างต่อเนื่อง
+                  สำเร็จการศึกษาระดับมัธยมศึกษา ปีที่ 6  ผลการเรียนเฉลี่ย 2.67 จากโรงเรียนสารสาสน์วิเทศคลองหลวง มีประสบการณ์ทำงานด้านทหาร เป็นเวลา 2 ปี มีความสนใจในการพัฒนาและเรียนรู้เทคโนโลยีใหม่ๆ อย่างต่อเนื่อง
                 </p>
               </div>
               
