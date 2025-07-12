@@ -49,16 +49,22 @@ const About = () => {
             {/* Profile Image Section */}
             <div className={`text-center ${isVisible ? 'animate-slide-in-left' : 'opacity-0 translate-x-12'}`}>
               <div className="relative inline-block">
-                <div className="w-64 h-64 mx-auto bg-gradient-to-br from-amber-200 via-orange-300 to-yellow-200 rounded-full flex items-center justify-center mb-6 shadow-2xl relative overflow-hidden group hover:scale-105 transition-all duration-500">
-                  {/* Shimmer effect */}
-                  <div className="absolute inset-0 bg-gradient-shimmer animate-shimmer"></div>
-                  <User size={120} className="text-amber-800 relative z-10 group-hover:scale-110 transition-transform duration-300" />
+                <div className="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl relative group hover:scale-105 transition-all duration-500">
+                  {/* Profile Image */}
+                  <img 
+                    src="profile.png" 
+                    alt=""
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  
+                  {/* Shimmer effect overlay */}
+                  <div className="absolute inset-0 bg-gradient-shimmer animate-shimmer opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
                   
                   {/* Floating elements around profile */}
-                  <div className="absolute -top-2 -right-2 bg-amber-400 rounded-full p-2 animate-bounce-gentle">
+                  <div className="absolute -top-2 -right-2 bg-amber-400 rounded-full p-2 animate-bounce-gentle z-10">
                     <Star size={16} className="text-white" />
                   </div>
-                  <div className="absolute -bottom-2 -left-2 bg-orange-400 rounded-full p-2 animate-float">
+                  <div className="absolute -bottom-2 -left-2 bg-orange-400 rounded-full p-2 animate-float z-10">
                     <Sparkles size={16} className="text-white" />
                   </div>
                 </div>

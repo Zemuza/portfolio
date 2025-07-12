@@ -9,11 +9,11 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'เว็บไซต์พัฒนา 1',
-      category: 'Web Development',
-      description: 'รายละเอียดเว็บไซต์ เทคโนโลยีที่ใช้ และบทบาทในโครงการ',
-      tech: ['React', 'Node.js', 'MongoDB'],
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+      title: 'การวาดภาพประกวดภาพระบายสี',
+      category: 'การประกวด',
+      description: 'ได้รับรางวัลรองชนะเลิศอันดับ 1 หัวข้อ ร่วมฉลอง 50 ปี โรงเรียนสารสาสน์พิทยา',
+      tech: [],
+      image: 'cera.jpg',
       demo: '#',
       github: '#',
       gradient: 'from-blue-500 to-purple-600'
@@ -22,10 +22,10 @@ const Projects = () => {
       title: 'งานออกแบบ UI/UX',
       category: 'Design',
       description: 'รายละเอียดงานออกแบบ เครื่องมือที่ใช้ และกระบวนการทำงาน',
-      tech: ['Figma', 'Adobe XD', 'Photoshop'],
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
-      demo: '#',
-      github: '#',
+      tech: ['Figma'],
+      image: 'cerd.png',
+      demo: 'https://www.figma.com/design/j2d9X8BhvEgmhZ7GlDNEXg/Design-System?node-id=106-4&t=Id2TsGSnsB5d8Rki-1',
+      github: 'https://www.figma.com/design/j2d9X8BhvEgmhZ7GlDNEXg/Design-System?node-id=106-4&t=Id2TsGSnsB5d8Rki-1',
       gradient: 'from-pink-500 to-rose-600'
     },
     {
@@ -33,19 +33,19 @@ const Projects = () => {
       category: 'Mobile App',
       description: 'รายละเอียดแอป ฟีเจอร์หลัก และเทคโนโลยีที่ใช้พัฒนา',
       tech: ['React Native', 'Firebase', 'API'],
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1',
-      demo: '#',
-      github: '#',
+      image: 'tickapp.png',
+      demo: 'https://github.com/zemuza101/TickTack2',
+      github: 'https://github.com/zemuza101/TickTack2',
       gradient: 'from-green-500 to-teal-600'
     },
     {
-      title: 'งานวิจัย/บทความ',
+      title: 'ภาพวาด',
       category: 'Research',
-      description: 'หัวข้องานวิจัย วัตถุประสงค์ และผลการศึกษา',
-      tech: ['Python', 'Data Analysis', 'Machine Learning'],
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475',
-      demo: '#',
-      github: '#',
+      description: 'ภาพวาดและศิลปะส่วนตัว',
+      tech: ['pixiv'],
+      image: 'pixiv.png',
+      demo: 'https://www.pixiv.net/en/users/15697165',
+      github: 'https://www.pixiv.net/en/users/15697165',
       gradient: 'from-orange-500 to-red-600'
     }
   ];
