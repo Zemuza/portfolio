@@ -32,7 +32,7 @@ const Projects = () => {
       title: 'แอปพลิเคชันมือถือ',
       category: 'Mobile App',
       description: 'รายละเอียดแอป ฟีเจอร์หลัก และเทคโนโลยีที่ใช้พัฒนา',
-      tech: ['React Native', 'Firebase', 'API'],
+      tech: ['VS2022', 'Android Studio', 'Maui'],
       image: 'tickapp.png',
       demo: 'https://github.com/zemuza101/TickTack2',
       github: 'https://github.com/zemuza101/TickTack2',
@@ -40,7 +40,7 @@ const Projects = () => {
     },
     {
       title: 'ภาพวาด',
-      category: 'Research',
+      category: 'Drawing',
       description: 'ภาพวาดและศิลปะส่วนตัว',
       tech: ['pixiv'],
       image: 'pixiv.png',

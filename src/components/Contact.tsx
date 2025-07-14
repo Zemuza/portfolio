@@ -1,15 +1,9 @@
 
-import { Mail, Phone, Github, Linkedin, MapPin, Send, MessageCircle, Sparkles } from 'lucide-react';
+import { Mail, Phone, Github, Linkedin, MapPin, MessageCircle, Sparkles } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
   const [isVisible, setIsVisible] = useState(false);
-  const [focusedField, setFocusedField] = useState<string | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,19 +23,6 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   const contactMethods = [
     {
       icon: Mail,
@@ -60,7 +41,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'ที่อยู่',
-      value: 'บ้านเลขที่ 98/136 ต.คลองสาท อ.คลองหลวง จ.ปทุมธานี',
+      value: '98/136 ถ.เลียบคลองสาม ต.คลองสาม อ.คลองหลวง ปทุมธานี ไทย 12120',
       color: 'from-blue-400 to-cyan-500',
       bgColor: 'from-blue-50 to-cyan-50'
     }
@@ -95,10 +76,10 @@ const Contact = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="max-w-4xl mx-auto">
             {/* Contact Information */}
             <div className={`space-y-6 ${
-              isVisible ? 'animate-slide-in-left' : 'opacity-0 translate-x-12'
+              isVisible ? 'animate-fade-in' : 'opacity-0'
             }`}>
               <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50">
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-8">
@@ -125,7 +106,7 @@ const Contact = () => {
                 
                 <div className="mt-8">
                   <h4 className="text-lg font-bold text-slate-700 mb-6">Social Media</h4>
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 justify-center">
                     {socialLinks.map((social, index) => (
                       <a 
                         key={index}
@@ -138,105 +119,6 @@ const Contact = () => {
                     ))}
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className={`${
-              isVisible ? 'animate-slide-in-right' : 'opacity-0 translate-x-12'
-            }`}>
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50">
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-8">
-                  ส่งข้อความหาฉัน
-                </h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="relative">
-                    <label 
-                      htmlFor="name" 
-                      className={`block text-slate-700 font-medium mb-2 transition-all duration-300 ${
-                        focusedField === 'name' ? 'text-purple-600' : ''
-                      }`}
-                    >
-                      ชื่อ
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      onFocus={() => setFocusedField('name')}
-                      onBlur={() => setFocusedField(null)}
-                      className={`w-full px-6 py-4 rounded-2xl border-2 focus:outline-none transition-all duration-300 bg-white/70 backdrop-blur-sm ${
-                        focusedField === 'name' 
-                          ? 'border-purple-400 shadow-lg shadow-purple-200' 
-                          : 'border-slate-200 hover:border-slate-300'
-                      }`}
-                      required
-                    />
-                  </div>
-                  
-                  <div className="relative">
-                    <label 
-                      htmlFor="email" 
-                      className={`block text-slate-700 font-medium mb-2 transition-all duration-300 ${
-                        focusedField === 'email' ? 'text-purple-600' : ''
-                      }`}
-                    >
-                      อีเมล
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      onFocus={() => setFocusedField('email')}
-                      onBlur={() => setFocusedField(null)}
-                      className={`w-full px-6 py-4 rounded-2xl border-2 focus:outline-none transition-all duration-300 bg-white/70 backdrop-blur-sm ${
-                        focusedField === 'email' 
-                          ? 'border-purple-400 shadow-lg shadow-purple-200' 
-                          : 'border-slate-200 hover:border-slate-300'
-                      }`}
-                      required
-                    />
-                  </div>
-                  
-                  <div className="relative">
-                    <label 
-                      htmlFor="message" 
-                      className={`block text-slate-700 font-medium mb-2 transition-all duration-300 ${
-                        focusedField === 'message' ? 'text-purple-600' : ''
-                      }`}
-                    >
-                      ข้อความ
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      onFocus={() => setFocusedField('message')}
-                      onBlur={() => setFocusedField(null)}
-                      rows={5}
-                      className={`w-full px-6 py-4 rounded-2xl border-2 focus:outline-none transition-all duration-300 resize-none bg-white/70 backdrop-blur-sm ${
-                        focusedField === 'message' 
-                          ? 'border-purple-400 shadow-lg shadow-purple-200' 
-                          : 'border-slate-200 hover:border-slate-300'
-                      }`}
-                      required
-                    ></textarea>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-4 px-8 rounded-2xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 animate-glow"
-                  >
-                    <Send size={20} />
-                    <span>ส่งข้อความ</span>
-                  </button>
-                </form>
               </div>
             </div>
           </div>

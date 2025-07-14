@@ -1,28 +1,37 @@
-
 import { Award, Calendar, ExternalLink } from 'lucide-react';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { useState } from 'react';
 
 const Certificates = () => {
   const certificates = [
     {
-      title: 'Certificate จากคอร์สออนไลน์',
-      issuer: 'Coursera / Udemy / edX',
-      date: 'มม./ปปปป',
-      description: 'รายละเอียดคอร์สที่เรียนจบ',
-      link: '#'
+      title: 'การวาดภาพประกวดภาพระบายสี ',
+      issuer: 'โรงเรียนสารสาสน์พิทยา',
+      date: '22/12/2557',
+      description: 'ได้รับรางวัลรองชนะเลิศอันดับ 1 หัวข้อ ร่วมฉลอง 50 ปี โรงเรียนสารสาสน์พิทยา',
+      image: 'cera.jpg'
     },
     {
-      title: 'รางวัลจากการแข่งขัน',
-      issuer: 'ชื่อการแข่งขัน',
-      date: 'มม./ปปปป',
-      description: 'รางวัลที่ได้รับและรายละเอียดการแข่งขัน',
-      link: '#'
+      title: 'การประกวดทักษะวิชาชีพคหกรรมศาสตร์ ',
+      issuer: 'มหาวิทยาลัยเทคโนโลยีราชมลคลธัญบุรี',
+      date: '1/12/2559',
+      description: 'ได้รับรางวัลรองชนะเลิศอันดับ 1 หัวข้อ การผลิตสื่อประกอบเล่นนิทาน คำสอนพ่อ',
+      image: 'cerb.jpg'
     },
     {
-      title: 'ประกาศนียบัตรต่างๆ',
-      issuer: 'หน่วยงานที่ออกใบประกาศ',
-      date: 'มม./ปปปป',
-      description: 'รายละเอียดประกาศนียบัตร',
-      link: '#'
+      title: 'โครงการ สร้างความสุขเพิ่มรอยยิ้ม ผู้สูงอายุ',
+      issuer: 'โรงเรียนสารสาสน์วิเทศคลองหลวง',
+      date: '10/12/2559',
+      description: 'โครงการ สร้างความสุขเพิ่มรอยยิ้ม ผู้สูงอายุ',
+      image: 'cerc.jpg'
+    },
+
+    {
+      title: 'GET start with Azure App',
+      issuer: 'SET',
+      date: '11/1/2568',
+      description: 'โครงการ สร้างความสุขเพิ่มรอยยิ้ม ผู้สูงอายุ',
+      image: 'certificateset.png'
     }
   ];
 
@@ -51,13 +60,21 @@ const Certificates = () => {
                 
                 <p className="text-amber-800 mb-4">{cert.description}</p>
                 
-                <a 
-                  href={cert.link}
-                  className="inline-flex items-center text-amber-700 hover:text-amber-900 transition-colors"
-                >
-                  <ExternalLink size={16} className="mr-2" />
-                  ดูใบรับรอง
-                </a>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button className="inline-flex items-center text-amber-700 hover:text-amber-900 transition-colors cursor-pointer">
+                      <ExternalLink size={16} className="mr-2" />
+                      ดูใบรับรอง
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl w-full p-0">
+                    <img 
+                      src={cert.image} 
+                      alt={cert.title}
+                      className="w-full h-auto object-contain rounded-lg"
+                    />
+                  </DialogContent>
+                </Dialog>
               </div>
             ))}
           </div>

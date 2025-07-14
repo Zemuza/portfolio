@@ -89,7 +89,7 @@ const About = () => {
                     หรรษธร เกษียร
                   </h3>
                 </div>
-                <p className="text-lg text-amber-800 hover:translate-x-2 hover:text-amber-900 transition-all duration-300 cursor-default">ชื่อเล่น ต้าร์ </p>
+                <p className="text-lg text-amber-800 hover:translate-x-2 hover:text-amber-900 transition-all duration-300 cursor-default">ชื่อเล่น ต้าร์ ปัจจุบันกำลังศึกษาอยู่ที่มหาวิทยาลัยกรุงเทพ เกรดเฉลี่ยรวม 2.79 หน่วยกิตรวม 87 คณะ เทคโนโลยีสารสนเทศและนวัตกรรม ภาควิชา เทคโนโลยีสารสนเทศ</p>
               </div>
               
               {/* Education Card */}
